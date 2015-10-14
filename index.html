@@ -6,9 +6,19 @@
 </head>
 <body>
 	<div class="banner-container">
-		<video>
-			<source type="video/mp4" />
+		<video height="100%" controls>
+			<source src="http://lamcdn.net/specials.lookatme.ru/0000000001/banners/system/clients/top/guerlain/video2.mp4" type="video/mp4">
 		</video>
 	</div>
+	<script type="text/javascript">
+
+		if (window.addEventListener) {
+			window.addEventListener("message", function(event) {
+				console.log('event.data');
+				console.log(event.data);
+			});
+		} 
+
+	</script>
 </body>
 </html>
