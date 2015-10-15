@@ -9,6 +9,10 @@ body {
 	background-color: black;
 }
 
+.banner-container video {
+	background-color: black;
+}
+
 .player-button {
 	background-size: 100% 100%;
     -o-transition: opacity 0.1s ease-out;
