@@ -1,5 +1,16 @@
 $(window).on("message", function(e) {
-	initIFrame(e.originalEvent.data);
+
+	switch(e.originalEvent.data.eventName) {
+		case 'scrolledDown':
+			$('video').get(0).pause();
+			break;
+		case 'scrolledUp':
+			$('video').get(0).play();
+			break;
+		default:
+			initIFrame(e.originalEvent.data);
+	}
+
 });
 
 function initIFrame(params) {
