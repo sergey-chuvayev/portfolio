@@ -13,8 +13,7 @@ $(function() {
 		bg: 'http://content.adfox.ru/151007/adfox/503157/1402233_2.jpg'
 	});
 
-	// var bannerBottom = $('.iframe-container').position().top + $('.iframe-container').height();
-	var bannerBottom = $('.iframe-container').position().top + 50;
+	var bannerBottom = $('.iframe-container').position().top + $('.iframe-container').height() - 200;
 	$(document, window).scroll(function() {
 		var iframe = $('iframe').get(0);
 		var win = iframe.contentWindow;
