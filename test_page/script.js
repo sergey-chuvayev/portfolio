@@ -13,12 +13,15 @@ $(function() {
 		bg: 'http://content.adfox.ru/151007/adfox/503157/1402233_2.jpg'
 	});
 
-	var bannerBottom = $('.iframe-container').position().top + $('.iframe-container').height();
+	// var bannerBottom = $('.iframe-container').position().top + $('.iframe-container').height();
+	var bannerBottom = $('.iframe-container').position().top + 50;
 	$(document, window).scroll(function() {
 		var iframe = $('iframe').get(0);
+		var win = iframe.contentWindow;
 		if ($(document, window).scrollTop() > bannerBottom) {
-			var win = iframe.contentWindow;
-			win.postMessage('scrolled', config.iframeURL);
+			win.postMessage('scrolledUnder', config.iframeURL);
+		} else {
+			win.postMessage('scrolledAbove', config.iframeURL);
 		}
 	});
 });

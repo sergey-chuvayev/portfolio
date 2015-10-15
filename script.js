@@ -1,10 +1,10 @@
 $(window).on("message", function(e) {
 
-	switch(e.originalEvent.data.eventName) {
-		case 'scrolledDown':
+	switch(e.originalEvent.data) {
+		case 'scrolledUnder':
 			$('video').get(0).pause();
 			break;
-		case 'scrolledUp':
+		case 'scrolledAbove':
 			$('video').get(0).play();
 			break;
 		default:
