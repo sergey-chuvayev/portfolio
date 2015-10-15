@@ -1,0 +1,8 @@
+.container {
+	width: 970px;
+	margin: 0 auto;
+}
+
+.iframe-container iframe {
+	border: none;
+}

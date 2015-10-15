@@ -1,8 +1,10 @@
-.container {
-	width: 970px;
-	margin: 0 auto;
+body {
+	margin: 0;
 }
 
-.iframe-container iframe {
-	border: none;
+.banner-container {
+	width: 970px;
+	height: 250px;
+	background-color: grey;
+	text-align: center;
 }
