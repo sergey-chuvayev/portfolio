@@ -10,7 +10,7 @@ $(function() {
 	// pass video and bg links to iframe
 	init({
 		video: 'http://lamcdn.net/specials.lookatme.ru/0000000001/banners/system/clients/top/guerlain/video2.mp4',
-		bg: 'http://www.emoticonswallpapers.com/background/skulls/skulls-background-pattern-0815.gif'
+		bg: 'http://content.adfox.ru/151007/adfox/503157/1402233_2.jpg'
 	});
 });
 
