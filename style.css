@@ -50,6 +50,7 @@ body {
 	top: 187px;
 	width: 48px;
 	height: 48px;
+	display: none;
 }
 
 .button-mute {
@@ -67,4 +68,5 @@ body {
     top: 199px;
     width: 36px;
     height: 36px;
+    display: none;
 }
