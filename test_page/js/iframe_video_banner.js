@@ -14,14 +14,20 @@ $.fn.iFrameVideoBanner = function(options) {
 
 	var defaultOptions = { 
 		iframeURL: 'http://localhost:4000/',
-		video: 'http://lamcdn.net/specials.lookatme.ru/0000000001/banners/system/clients/top/guerlain/video2.mp4',
-		bg: 'http://content.adfox.ru/151007/adfox/503157/1402233_2.jpg',
+		video: '',
+		bg: '',
 		width: 970,
 		height: 250
 	}
-	for(var option in defaultOptions) this[option] = options && options[option]!==undefined ? options[option] : defaultOptions[option];
 
-	// set iframeUrl to iframe
+	// check if some otions are undefined
+	for (var option in defaultOptions) {
+		if (options[option] === undefined) {
+			options[option] = defaultOptions[option];
+		}
+	}
+
+	// set passed options to iframe
 	$iframe.attr('src', options.iframeURL)
 		.attr('width', options.width)
 		.attr('height', options.height)
