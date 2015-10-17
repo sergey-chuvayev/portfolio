@@ -102,28 +102,62 @@ $(function() {
 		player.play();
 	});
 
-	// appear replay button and pause video
+	// video ended: appear replay button and pause video
     player.selectors.video.get(0).addEventListener('ended',function(){
     	player.pause();
     	player.hideAllControls();
     	$('.button-replay').show();
+    	eventOccured('ended');
     	state = 'ended'
     });
 
+    // click events
     player.selectors.bReplay.click(function(){
     	player.replay();
+    	eventOccured('replay');
     });
     player.selectors.bPause.click(function(){
     	player.pause();
     	state = 'manuallyPaued'
+    	eventOccured('pause');
     });
     player.selectors.bPlay.click(function(){
     	player.play();
+    	eventOccured('play');
     });
     player.selectors.bMute.click(function(){
     	player.mute();
+    	eventOccured('mute');
     });
     player.selectors.bUnmute.click(function(){
     	player.unmute();
+    	eventOccured('unmute');
     });
+
+	var eventOccured = function(eventStr) {
+		// TODO: ability to set adfox or google analytics links
+		switch(eventStr) {
+			case 'replay':
+				console.info('Replay button pressed');
+				// example of google analytics 
+				// ga('send', 'event', 'replay', 'click');
+				break;
+			case 'play':
+				console.info('Play button pressed');
+				break;
+			case 'pause':
+				console.info('Pause button pressed');
+				break;
+			case 'mute':
+				console.info('Mute button pressed');
+				break;
+			case 'unmute':
+				console.info('Unmute button pressed');
+				break;
+			case 'ended':
+				console.info('Video has been fully played');
+				break;
+		}
+	}
+    
 });
