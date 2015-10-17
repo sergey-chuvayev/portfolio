@@ -1,5 +1,15 @@
 $.fn.iFrameVideoBanner = function(options) {
 
+	if (options.iframeURL === undefined) {
+		throw 'Please pass iFrame URL as { iframeURL: "http://hostname.domain/iframepage" }'
+	}
+	if (options.video === undefined) {
+		throw 'Please pass video URL as { video: "link/to/video" }'
+	}
+	if (options.bg === undefined) {
+		throw 'Please pass background URL as { bg: "link/to/background" }'
+	}
+
 	var $iframe = this;
 
 	var defaultOptions = { 
