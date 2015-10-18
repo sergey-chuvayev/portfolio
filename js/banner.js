@@ -1,7 +1,7 @@
 var state = '';
 var firstWatch = true;
 
-// create object on video from player.js
+// Player class is in player.js file
 var player = new Player($('video'));
 
 $(window).on("message", function(e) {
@@ -55,9 +55,6 @@ $(function() {
 			var freq = 5;
 			countWatchTime(freq);
 			firstWatch = false;
-			player.selectors.video.on('ended', function(){
-				eventOccured('ended');
-			});
 		} else {
 			// remove the event listener for time count
 			player.selectors.video.off('timeupdate');
@@ -73,10 +70,16 @@ $(function() {
 	function countWatchTime(frequency) {
 		player.selectors.video.on('timeupdate',function() {
 			var ct = parseInt(this.currentTime);
+			var duration = parseInt(this.duration);
 			if (this.lastTime !== ct) {
+				// check every freq value
 				if (ct % frequency === 0 && ct !== 0) {
 					eventOccured(ct);
 				}
+				// check if video ended
+				if (ct === duration) {
+					eventOccured('ended');
+				} 
 			}
 			this.lastTime=ct;
 		});
