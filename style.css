@@ -70,3 +70,11 @@ body {
     height: 36px;
     display: none;
 }
+
+progress {
+	position: absolute;
+	bottom: 0;
+	left: 262px;
+	width: 444px;
+	/* TODO: make a cool style of a progress bar */
+}

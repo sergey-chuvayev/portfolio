@@ -1,4 +1,5 @@
 var state = '';
+var firstWatch = true;
 
 var Player = function($videoSelector) {
 
@@ -8,7 +9,8 @@ var Player = function($videoSelector) {
 		bPause: $('.button-pause'),
 		bPlay: $('.button-play'),
 		bMute: $('.button-mute'),
-		bUnmute: $('.button-unmute')
+		bUnmute: $('.button-unmute'),
+		progress: $('#progressBar')
 	}
 
 	var video = this.selectors.video.get(0);
@@ -23,6 +25,7 @@ var Player = function($videoSelector) {
 		video.play();
 		this.selectors.bPlay.hide();
 		this.selectors.bPause.show();
+		this.selectors.progress.show();
 		state = 'playing'
 	}
 	this.replay = function() {
@@ -32,6 +35,7 @@ var Player = function($videoSelector) {
 		state = 'replay'
 	}
 	this.hideAllControls = function() {
+		this.selectors.progress.hide();
 		this.selectors.bPlay.hide();
 		this.selectors.bPause.hide();
 		this.selectors.bReplay.hide();
@@ -49,6 +53,10 @@ var Player = function($videoSelector) {
 		this.selectors.bUnmute.hide();
 		$(video).prop('muted', false);
 		state = 'unmuted'
+	}
+	this.setProgressValueTo = function(val, duration) {
+		var percentage = Math.floor((100 / duration) * val);
+		this.selectors.progress.val(percentage);
 	}
 }
 
@@ -87,7 +95,6 @@ $(window).on("message", function(e) {
 });
 
 $(function() {
-	var firstWatch = true;
 
 	// add preloader on load
 	player.selectors.video.on('loadstart', function () {
@@ -103,44 +110,44 @@ $(function() {
 		player.mute();
 		player.play();
 		
-		// on started video play here
 		if (firstWatch) {
-			firstWatch = false;
-			var videoDuration = parseInt(player.selectors.video.get(0).duration);
 			var freq = 5;
-			countWatchTime(videoDuration, freq);
+			countWatchTime(freq);
+			firstWatch = false;
 		} else {
-			// remove event listner if watching again
+			// remove the event listener for time count
 			player.selectors.video.off('timeupdate');
 		}
+
+		player.selectors.video.on('timeupdate',function(){
+			player.setProgressValueTo(this.currentTime, this.duration);
+		});
+		
 	});
 
-	function countWatchTime(duration, frequency) {
-		var seconds = [];
-		// set array: every nth second
-		for (var i = 0; i < duration; i++) {
-			if (i%frequency === 0) {
-				seconds.push(i);
-			}
-		}
-		// send event for every nth second
-		player.selectors.video.on('timeupdate', function(){
-			for (var i = 1; i < seconds.length; i++) {
-				if (parseInt(player.selectors.video.get(0).currentTime) === seconds[i]) {
-					eventOccured(seconds[i]);
+	function countWatchTime(frequency) {
+		player.selectors.video.on('timeupdate',function() {
+			var ct = parseInt(this.currentTime);
+			if (this.lastTime !== ct) {
+				if (ct % frequency === 0 && ct !== 0) {
+					eventOccured(ct);
 				}
 			}
+			this.lastTime=ct;
 		});
 	}
 
 	// video ended: appear replay button and pause video
-    player.selectors.video.get(0).addEventListener('ended',function(){
-    	player.pause();
-    	player.hideAllControls();
-    	$('.button-replay').show();
-    	eventOccured('ended');
-    	state = 'ended'
-    });
+	if (firstWatch) {
+		console.log('in firstWatch ended');
+		player.selectors.video.on('ended',function(){
+			player.pause();
+			player.hideAllControls();
+			$('.button-replay').show();
+			eventOccured('ended');
+			state = 'ended'
+		});
+	}
 
     // click events
     player.selectors.bReplay.click(function(){
