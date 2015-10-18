@@ -105,15 +105,33 @@ $(function() {
 		
 		// on started video play here
 		if (firstWatch) {
-			console.log('in firstWatch');
 			firstWatch = false;
 			var videoDuration = parseInt(player.selectors.video.get(0).duration);
 			var freq = 5;
 			countWatchTime(videoDuration, freq);
 		} else {
-			console.log('not in firstWatch');
+			// remove event listner if watching again
+			player.selectors.video.off('timeupdate');
 		}
 	});
+
+	function countWatchTime(duration, frequency) {
+		var seconds = [];
+		// set array: every nth second
+		for (var i = 0; i < duration; i++) {
+			if (i%frequency === 0) {
+				seconds.push(i);
+			}
+		}
+		// send event for every nth second
+		player.selectors.video.on('timeupdate', function(){
+			for (var i = 1; i < seconds.length; i++) {
+				if (parseInt(player.selectors.video.get(0).currentTime) === seconds[i]) {
+					eventOccured(seconds[i]);
+				}
+			}
+		});
+	}
 
 	// video ended: appear replay button and pause video
     player.selectors.video.get(0).addEventListener('ended',function(){
@@ -147,23 +165,6 @@ $(function() {
     	eventOccured('unmute');
     });
 
-    function countWatchTime(duration, frequency) {
-		var seconds = [];
-		// set array: every nth second
-		for (var i = 0; i < duration; i++) {
-			if (i%frequency === 0) {
-				seconds.push(i);
-			}
-		}
-		// send event for every nth second
-		player.selectors.video.on('timeupdate', function(){
-			for (var i = 1; i < seconds.length; i++) {
-				if (parseInt(player.selectors.video.get(0).currentTime) === seconds[i]) {
-					eventOccured(seconds[i]);
-				}
-			}
-		});
-	}
 
 	var eventOccured = function(eventParam) {
 		// TODO: ability to set adfox or google analytics links
