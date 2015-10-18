@@ -27,7 +27,7 @@ body {
 }
 
 .button-replay {
-	background: url('img/replay.png');
+	background: url('../img/replay.png');
 	left: 422px;
 	top: 60px;
 	width: 127px;
@@ -36,7 +36,7 @@ body {
 }
 
 .button-play {
-	background: url('img/play.png');
+	background: url('../img/play.png');
 	left: 269px;
 	top: 187px;
 	width: 48px;
@@ -45,7 +45,7 @@ body {
 }
 
 .button-pause {
-	background: url('img/pause.png');
+	background: url('../img/pause.png');
 	left: 269px;
 	top: 187px;
 	width: 48px;
@@ -54,7 +54,7 @@ body {
 }
 
 .button-mute {
-	background: url('img/mute.png');
+	background: url('../img/mute.png');
     left: 662px;
     top: 199px;
     width: 36px;
@@ -63,7 +63,7 @@ body {
 }
 
 .button-unmute {
-	background: url('img/unmute.png');
+	background: url('../img/unmute.png');
     left: 662px;
     top: 199px;
     width: 36px;
