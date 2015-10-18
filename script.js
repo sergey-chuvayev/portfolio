@@ -87,6 +87,7 @@ $(window).on("message", function(e) {
 });
 
 $(function() {
+	var firstWatch = true;
 
 	// add preloader on load
 	player.selectors.video.on('loadstart', function () {
@@ -96,10 +97,22 @@ $(function() {
 
 	// remove preloader on play
 	player.selectors.video.on('canplay', function () {
+		console.log(firstWatch);
 		console.log('canplay');
 		$(this).removeAttr('poster');
 		player.mute();
 		player.play();
+		
+		// on started video play here
+		if (firstWatch) {
+			console.log('in firstWatch');
+			firstWatch = false;
+			var videoDuration = parseInt(player.selectors.video.get(0).duration);
+			var freq = 5;
+			countWatchTime(videoDuration, freq);
+		} else {
+			console.log('not in firstWatch');
+		}
 	});
 
 	// video ended: appear replay button and pause video
@@ -134,9 +147,27 @@ $(function() {
     	eventOccured('unmute');
     });
 
-	var eventOccured = function(eventStr) {
+    function countWatchTime(duration, frequency) {
+		var seconds = [];
+		// set array: every nth second
+		for (var i = 0; i < duration; i++) {
+			if (i%frequency === 0) {
+				seconds.push(i);
+			}
+		}
+		// send event for every nth second
+		player.selectors.video.on('timeupdate', function(){
+			for (var i = 1; i < seconds.length; i++) {
+				if (parseInt(player.selectors.video.get(0).currentTime) === seconds[i]) {
+					eventOccured(seconds[i]);
+				}
+			}
+		});
+	}
+
+	var eventOccured = function(eventParam) {
 		// TODO: ability to set adfox or google analytics links
-		switch(eventStr) {
+		switch(eventParam) {
 			case 'replay':
 				console.info('Replay button pressed');
 				// example of google analytics 
@@ -157,6 +188,8 @@ $(function() {
 			case 'ended':
 				console.info('Video has been fully played');
 				break;
+			default:
+				console.info('Watched ', eventParam, ' seconds of video');
 		}
 	}
     
