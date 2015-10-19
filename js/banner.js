@@ -1,4 +1,3 @@
-var state = '';
 var firstWatch = true;
 
 // Player class is in player.js file
@@ -22,7 +21,7 @@ $(window).on("message", function(e) {
 	}
 
 	function notLockState() {
-		return state !== 'ended' && state !== 'manuallyPaued';
+		return player.state !== 'ended' && player.state !== 'manuallyPaused';
 	}
 
 	function initIFrame(params) {
@@ -46,7 +45,7 @@ $(function() {
 		canPlayEvent();
 	});
 
-	function canPlayEvent() { // to prevent safari bug - separate function
+	function canPlayEvent() { // separate function to prevent safari bug (stops firing canplay)
 		$(this).removeAttr('poster');
 		player.mute();
 		player.play();
@@ -89,7 +88,7 @@ $(function() {
 		player.pause();
 		player.hideAllControls();
 		$('.button-replay').show();
-		state = 'ended'
+		player.state = 'ended'
 	});
 
     // click events
@@ -100,7 +99,7 @@ $(function() {
     });
     player.selectors.bPause.click(function(){
     	player.pause();
-    	state = 'manuallyPaued'
+    	player.state = 'manuallyPaused'
     	eventOccured('pause');
     });
     player.selectors.bPlay.click(function(){
