@@ -138,6 +138,16 @@ $(function() {
 				break;
 			default:
 				console.info('Watched ', eventParam, ' seconds of video');
+				// TODO: make switch to send event to analytics like that:
+				// switch(eventParam) {
+				// 	case 5:
+				// 		ga('send', 'event', '5seconds');
+				// 		break;
+				// 	case 10:
+				// 		ga('send', 'event', '10seconds');
+				// 		break;
+				//	...
+				// }
 		}
 	}
     
