@@ -8,13 +8,11 @@ $(window).on("message", function(e) {
 
 	switch(e.originalEvent.data) {
 		case 'scrolledUnder':
-			console.log(state);
 			if (notLockState()) {
 				player.pause();
 			}
 			break;
 		case 'scrolledAbove':
-			console.log(state);
 			if (notLockState()) {
 				player.play();
 			}
@@ -45,8 +43,6 @@ $(function() {
 
 	// video loaded: remove preloader on play
 	player.selectors.video.on('canplay', function () {
-		console.log(firstWatch);
-		console.log('canplay');
 		$(this).removeAttr('poster');
 		player.mute();
 		player.play();

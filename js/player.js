@@ -10,16 +10,14 @@ var Player = function($videoSelector) {
 		progress: $('#progressBar')
 	}
 
-	var video = this.selectors.video.get(0);
-	
 	this.pause = function() {
-		video.pause();
+		this.selectors.video.get(0).pause();
 		this.selectors.bPlay.show();
 		this.selectors.bPause.hide();
 		state = 'paused'
 	}
 	this.play = function() {
-		video.play();
+		this.selectors.video.get(0).play();
 		this.selectors.bPlay.hide();
 		this.selectors.bPause.show();
 		this.selectors.progress.show();
@@ -27,8 +25,8 @@ var Player = function($videoSelector) {
 	}
 	this.replay = function() {
 		this.selectors.bReplay.hide();
-		video.currentTime = 0;
-		video.play();
+		this.selectors.video.get(0).currentTime = 0;
+		this.selectors.video.get(0).play();
 		state = 'replay'
 	}
 	this.hideAllControls = function() {
@@ -42,13 +40,13 @@ var Player = function($videoSelector) {
 	this.mute = function() {
 		this.selectors.bMute.hide();
 		this.selectors.bUnmute.show();
-		$(video).prop('muted', true);
+		this.selectors.video.prop('muted', true);
 		state = 'muted'
 	}
 	this.unmute = function() {
 		this.selectors.bMute.show();
 		this.selectors.bUnmute.hide();
-		$(video).prop('muted', false);
+		this.selectors.video.prop('muted', false);
 		state = 'unmuted'
 	}
 	this.setProgressValueTo = function(val, duration) {
