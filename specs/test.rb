@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 require 'rspec'
 
 config = {
-	host: 'http://localhost:5000'
+	host: 'http://testbanner.neocities.org/'
 }
 
 describe "Scrolling events" do  
