@@ -43,6 +43,10 @@ $(function() {
 
 	// video loaded: remove preloader on play
 	player.selectors.video.on('canplay', function () {
+		canPlayEvent();
+	});
+
+	function canPlayEvent() { // to prevent safari bug - separate function
 		$(this).removeAttr('poster');
 		player.mute();
 		player.play();
@@ -60,8 +64,7 @@ $(function() {
 		player.selectors.video.on('timeupdate',function(){
 			player.setProgressValueTo(this.currentTime, this.duration);
 		});
-		
-	});
+	}
 
 	function countWatchTime(frequency) {
 		player.selectors.video.on('timeupdate',function() {
@@ -93,6 +96,7 @@ $(function() {
     player.selectors.bReplay.click(function(){
     	player.replay();
     	eventOccured('replay');
+    	canPlayEvent(); // safari bug when not listening to 'canplay'
     });
     player.selectors.bPause.click(function(){
     	player.pause();
