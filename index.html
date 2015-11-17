@@ -1,23 +1,151 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<title></title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="jquery.placecomplete.js"></script>
+	<script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.1/select2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/3.4.1/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="jquery.placecomplete.css">
+
+	<style type="text/css">
+		#click {
+			height:29px;
+			margin-left:20px;
+		}
+		.values {
+			font-size: 30px;
+			margin-top: 22px;
+			margin-left: 50px;
+		}
+	</style>
 </head>
 <body>
-	<div class="banner-container">
-		<video width="444" height="250">
-			<source type="video/mp4">
-		</video>
-		<progress id='progressBar' min='0' max='100' value='0'></progress>
-		<div class="player-button button-play"></div>
-		<div class="player-button button-pause"></div>
-		<div class="player-button button-mute"></div>
-		<div class="player-button button-unmute"></div>
-		<div class="player-button button-replay"></div>
-	</div>
-	<script type="text/javascript" src="js/player.js"></script>
-	<script type="text/javascript" src="js/banner.js"></script>
+
+<input id="city1" type="text" />
+<input id="city2" type="text" />
+<button id="click">Рассчитать дистанцию и время</button>
+
+<div id="distance" class="values"></div>
+<div id="time" class="values"></div>
+
+    <script>
+    		var plainSpeed = 800;
+    		var launchLandTime = 15;
+            $(function() {
+
+            	var city1;
+            	var city2;
+
+            	var options = {
+					placeholderText: "Airport",
+					width: 300
+                }
+
+            	$city1 = $("#city1");
+            	$city2 = $("#city2");
+                $city1.placecomplete(options);
+                $city2.placecomplete(options);
+                $city1.on({
+                    "placecomplete:selected": function(evt, placeResult) {
+                    	city1 = {
+                    		lat: placeResult.geometry.viewport.O.O,
+                    		lng: placeResult.geometry.viewport.j.O
+                    	}
+                    }
+                });
+                $city2.on({
+                    "placecomplete:selected": function(evt, placeResult) {
+                        city2 = {
+                    		lat: placeResult.geometry.viewport.O.O,
+                    		lng: placeResult.geometry.viewport.j.O
+                    	}
+                    }
+                });
+                
+
+				$('#click').click(function(){
+					var distanceKm = distance(city1.lat, city1.lng, city2.lat, city2.lng, 'K');
+					$('#distance').html(Math.floor(distanceKm) + ' km');
+					var time = distanceKm/plainSpeed;
+
+					var hours = Math.floor(time * 60 / 60);
+					var mins = Math.floor(time * 60 % 60) + launchLandTime;
+					$('#time').html(hours + ' h' + ' ' + mins + ' m');
+				});
+
+            });
+
+            function distance(lat1, lon1, lat2, lon2, unit) {
+				var radlat1 = Math.PI * lat1/180
+				var radlat2 = Math.PI * lat2/180
+				var radlon1 = Math.PI * lon1/180
+				var radlon2 = Math.PI * lon2/180
+				var theta = lon1-lon2
+				var radtheta = Math.PI * theta/180
+				var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+				dist = Math.acos(dist)
+				dist = dist * 180/Math.PI
+				dist = dist * 60 * 1.1515
+				if (unit=="K") { dist = dist * 1.609344 }
+				if (unit=="N") { dist = dist * 0.8684 }
+				return dist
+			}
+    </script>
+
+
+<script type="text/javascript">
+
+	// ymaps.ready(init);
+
+	// function init() {
+
+	// 	function getFlightTime(city1, city2) {
+	// 		var cityCoord1, cityCoord2;
+	// 		ymaps.geocode(city1).then(function (res) {
+	// 			cityCoord1 = res.geoObjects.get(0).geometry.getCoordinates();
+	// 		}).then(function(){
+	// 			ymaps.geocode(city2).then(function (res) {
+	// 				cityCoord2 = res.geoObjects.get(0).geometry.getCoordinates();
+	// 			}).then(function() {
+	// 				console.log(cityCoord1);
+	// 				console.log(cityCoord2);
+	// 				distance = distance(cityCoord1[0], cityCoord1[1], cityCoord2[0], cityCoord2[1], "K");
+	// 				console.log(distance);
+	// 				console.log(distance / 800);
+	// 			});
+	// 		});
+	// 	}
+
+	// 	$('#click').click(function(){
+	// 		getFlightTime('Москва, город Москва, Россия','Франция');
+	// 	});
+
+		
+
+	// };
+
+	// function distance(lat1, lon1, lat2, lon2, unit) {
+	// 	var radlat1 = Math.PI * lat1/180
+	// 	var radlat2 = Math.PI * lat2/180
+	// 	var radlon1 = Math.PI * lon1/180
+	// 	var radlon2 = Math.PI * lon2/180
+	// 	var theta = lon1-lon2
+	// 	var radtheta = Math.PI * theta/180
+	// 	var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+	// 	dist = Math.acos(dist)
+	// 	dist = dist * 180/Math.PI
+	// 	dist = dist * 60 * 1.1515
+	// 	if (unit=="K") { dist = dist * 1.609344 }
+	// 	if (unit=="N") { dist = dist * 0.8684 }
+	// 	return dist
+	// }
+
+</script>
+
 </body>
 </html>
+
+
+
