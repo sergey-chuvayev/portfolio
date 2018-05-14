@@ -1,0 +1,47 @@
+@import "vars";
+@import "reset";
+
+// fonts
+@font-face {
+  font-family: 'HelveticaNeueLT';
+  src: url('../assets/fonts/helvetica-neue-lt-thin.eot');
+  src: url('../assets/fonts/helvetica-neue-lt-thin.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/helvetica-neue-lt-thin.woff') format('woff'),
+       url('../assets/fonts/helvetica-neue-lt-thin.otf')  format('opentype');
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT';
+  src: url('../assets/fonts/helvetica-neue-lt-light.eot');
+  src: url('../assets/fonts/helvetica-neue-lt-light.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/helvetica-neue-lt-light.woff') format('woff'),
+       url('../assets/fonts/helvetica-neue-lt-light.otf')  format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLT';
+  src: url('../assets/fonts/helvetica-neue-lt-bold.eot');
+  src: url('../assets/fonts/helvetica-neue-lt-bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/fonts/helvetica-neue-lt-bold.woff') format('woff'),
+       url('../assets/fonts/helvetica-neue-lt-bold.otf')  format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// variables
+$transparency60: rgba(255, 255, 255, .6);
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'HelveticaNeueLT';
+  font-weight: lighter;
+}
+

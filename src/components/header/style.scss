@@ -1,7 +1,39 @@
 .header-container {
-
+  display: flex;
+  align-items: center;
+  padding: 80px 90px;
 }
 
 .logo {
 	font-weight: bold;
+  font-size: 1.12em;
+}
+
+.divider {
+  margin: 0 2em;
+  height: 2.4em;
+  width: 1px;
+  background-color: rgba(255, 255, 255, .6);
+}
+
+.menu {
+}
+
+.item {
+  font-size: .8em;
+  font-weight: lighter;
+  transition: opacity 150ms;
+  cursor: pointer;
+  opacity: .65;
+  &:hover {
+    opacity: 1;
+  }
+  &.is-active {
+    opacity: 1;
+    cursor: default;
+  }
+}
+
+.coma {
+  opacity: .65;
 }
