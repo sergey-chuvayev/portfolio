@@ -8,7 +8,7 @@
   src: url('../assets/fonts/helvetica-neue-lt-thin.eot?#iefix') format('embedded-opentype'),
        url('../assets/fonts/helvetica-neue-lt-thin.woff') format('woff'),
        url('../assets/fonts/helvetica-neue-lt-thin.otf')  format('opentype');
-  font-weight: lighter;
+  font-weight: 100;
   font-style: normal;
 }
 
@@ -36,12 +36,18 @@
 $transparency60: rgba(255, 255, 255, .6);
 
 
+html {
+  font-size: 14px;
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: black;
   color: white;
   font-family: 'HelveticaNeueLT';
-  font-weight: lighter;
+  font-weight: normal;
+  font-size: 1rem;
 }
 
