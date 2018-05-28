@@ -43,8 +43,8 @@ class ProjectPage extends React.Component {
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
               {this.images.map((image, i) =>
-                <div className={styles['img']}>
-                  <img key={i} src={image} />
+                <div key={i} className={styles['img']}>
+                  <img src={image} />
                 </div>
               )}
             </div>

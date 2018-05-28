@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './style.scss';
+import { Link } from 'react-router-dom';
 
 class MainPage extends React.Component {
   render() {
@@ -10,7 +11,7 @@ class MainPage extends React.Component {
           <div className={styles['title']}>All projects</div>
           <ul className={styles['list']}>
             <li>
-              <a href="">Another project name</a> as Frontend Developer
+              <Link to={`/project/${1}`}>Another project name</Link> as Frontend Developer
             </li>
             <li>
               <a href="">Project name</a> as UX/UI Designer
