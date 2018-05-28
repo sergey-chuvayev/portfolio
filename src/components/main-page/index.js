@@ -6,7 +6,6 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className={styles['container-inner']}>
-        <div className={styles['image']}></div>
         <div className={styles['projects']}>
           <div className={styles['title']}>All projects</div>
           <ul className={styles['list']}>

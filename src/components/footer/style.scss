@@ -1,8 +1,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  padding: 60px 90px;
-  padding-top: 50px;
+  padding: 0 90px;
+  min-height: 120px;
+  max-height: 120px;
+  justify-content: center;
 }
 
 .item {

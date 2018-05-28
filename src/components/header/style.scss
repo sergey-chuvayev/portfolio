@@ -1,13 +1,17 @@
 .header-container {
   display: flex;
   align-items: center;
-  padding: 80px 90px;
-  padding-bottom: 50px;
+  padding: 0 90px;
+  min-height: 120px;
+  max-height: 120px;
 }
 
 .logo {
 	font-weight: bold;
   font-size: 1.12em;
+  a {
+    text-decoration: none;
+  }
 }
 
 .divider {

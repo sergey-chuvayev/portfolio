@@ -35,6 +35,15 @@
 // variables
 $transparency60: rgba(255, 255, 255, .6);
 
+body, html {
+  scrollbar-face-color: ThreeDFace !important;
+  scrollbar-shadow-color: ThreeDDarkShadow !important;
+  scrollbar-highlight-color: ThreeDHighlight !important;
+  scrollbar-3dlight-color: ThreeDLightShadow !important;
+  scrollbar-darkshadow-color: ThreeDDarkShadow !important;
+  scrollbar-track-color: Scrollbar !important;
+  scrollbar-arrow-color: ButtonText !important;
+}
 
 html {
   font-size: 14px;
@@ -44,7 +53,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #1B1B1B;
   color: white;
   font-family: 'HelveticaNeueLT';
   font-weight: normal;
