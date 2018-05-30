@@ -8,14 +8,18 @@ class Header extends React.Component {
 		return (
 			<header className={styles['header-container']}>
 				<div className={styles['logo']}>
-          <Link to="/" exact>Portfolio</Link>
+          <Link to="/" exact="true">Portfolio</Link>
         </div>
         <div className={styles['divider']}></div>
         <div className={styles['menu']}>
-          <span className={styles['item']}>Design</span><span className={styles['coma']}>, </span>
-          <span className={classnames(styles['item'], styles['is-active'])}>Web</span><span className={styles['coma']}>, </span>
-          <span className={styles['item']}>Music</span><span className={styles['coma']}>, </span>
-          <span className={styles['item']}>Artworks</span>
+          {this.props.data.categories.map((item, i) =>
+            <React.Fragment key={i}>
+              <span className={styles['item']}>{item}</span>
+              { this.props.data.categories.length - 1 !== i ?
+                (<span className={styles['coma']}>, </span>)
+              : false }
+            </React.Fragment>
+          )}
         </div>
 			</header>
 		);

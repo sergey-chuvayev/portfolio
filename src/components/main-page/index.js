@@ -9,24 +9,11 @@ class MainPage extends React.Component {
         <div className={styles['projects']}>
           <div className={styles['title']}>All projects</div>
           <ul className={styles['list']}>
-            <li>
-              <Link to={`/project/${1}`}>Another project name</Link> as Frontend Developer
-            </li>
-            <li>
-              <a href="">Project name</a> as UX/UI Designer
-            </li>
-            <li>
-              <a href="">Mix#001</a> as Music Producer
-            </li>
-            <li>
-              <a href="">Another project name</a> as Frontend Developer
-            </li>
-            <li>
-              <a href="">Project name</a> as UX/UI Designer
-            </li>
-            <li>
-              <a href="">Mix#001</a> as Music Producer
-            </li>
+            {this.props.projects.map((project, i) =>
+              <li key={i}>
+                <Link to={`/project/${project.id}`}>{project.name}</Link> as {project.role}
+              </li>
+            )}
           </ul>
         </div>
       </div>
