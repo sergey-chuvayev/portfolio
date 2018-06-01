@@ -18,7 +18,7 @@ class Root extends React.Component {
 
   componentDidMount() {
     setTimeout(() => this.setState({ invisibleSplash: true }), 2000);
-    // setTimeout(() => this.setState({ showSplash: false }), 3000);
+    setTimeout(() => this.setState({ showSplash: false }), 3000);
   }
 
 	render() {

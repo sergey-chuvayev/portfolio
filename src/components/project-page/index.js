@@ -35,13 +35,13 @@ class ProjectPage extends React.Component {
 
   render() {
 
+    // dates
     const startDate = this.state.project.startDate;
     const endDate = this.state.project.endDate;
     const parsedStart = startDate && `${startDate.getUTCFullYear()}/${startDate.getUTCMonth()+1}/${startDate.getUTCDate()}`;
     const parsedEnd = endDate && `${endDate.getUTCFullYear()}/${endDate.getUTCMonth()+1}/${endDate.getUTCDate()}`;
     const dates = `${parsedStart} - ${parsedEnd}`;
 
-                      // m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+ m.getUTCDate() + " " + m.getUTCHours() + ":" + m.getUTCMinutes() + ":" + m.getUTCSeconds();
     return (
       <div className={styles['container-inner']}>
         <div className={styles['top']}>
