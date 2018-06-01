@@ -11,19 +11,21 @@ class Root extends React.Component {
     super(props);
 
     this.state = {
-      showSplash: true
+      showSplash: true,
+      invisibleSplash: false
     }
   }
 
   componentDidMount() {
-    setTimeout(() => this.setState({ showSplash: false }), 3000);
+    setTimeout(() => this.setState({ invisibleSplash: true }), 2000);
+    // setTimeout(() => this.setState({ showSplash: false }), 3000);
   }
 
 	render() {
 		return (
 			<div className={styles['root-container']}>
         {this.state.showSplash ? (
-          <Splash />
+          <Splash invisible={this.state.invisibleSplash} />
         ) : false}
 				<Header />
         <Content />

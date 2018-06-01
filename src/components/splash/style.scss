@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 1;
+  transition: opacity 1s;
+  &.is-hidden { opacity: 0; }
 }
 
 @keyframes blink {
