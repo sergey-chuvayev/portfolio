@@ -3287,7 +3287,7 @@ hoek@4.x.x:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.1.tgz#9634502aa12c445dd5a7c5734b572bb8738aacbb"
 
-hoist-non-react-statics@^2.3.0, hoist-non-react-statics@^2.5.0:
+hoist-non-react-statics@^2.3.0:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-2.5.0.tgz#d2ca2dfc19c5a91c5a6615ce8e564ef0347e2a40"
 
@@ -4712,17 +4712,6 @@ mkdirp@0.5.1, mkdirp@0.5.x, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdi
   dependencies:
     minimist "0.0.8"
 
-mobx-react@^5.1.2:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/mobx-react/-/mobx-react-5.1.2.tgz#ec5c2d29a1df823dbd1b37e214fa36a0907054e2"
-  dependencies:
-    hoist-non-react-statics "^2.5.0"
-    react-lifecycles-compat "^3.0.2"
-
-mobx@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/mobx/-/mobx-4.3.0.tgz#50a5e63fd0197a83c68166ff83ada45b65c859f8"
-
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -5850,10 +5839,6 @@ react-error-overlay@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.0.tgz#d198408a85b4070937a98667f500c832f86bd5d4"
 
-react-lifecycles-compat@^3.0.2:
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
-
 react-router-dom@^4.2.2:
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-4.2.2.tgz#c8a81df3adc58bba8a76782e946cbd4eae649b8d"
@@ -5972,6 +5957,13 @@ reduce-function-call@^1.0.1:
   resolved "https://registry.yarnpkg.com/reduce-function-call/-/reduce-function-call-1.0.2.tgz#5a200bf92e0e37751752fe45b0ab330fd4b6be99"
   dependencies:
     balanced-match "^0.4.2"
+
+redux@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/redux/-/redux-4.0.0.tgz#aa698a92b729315d22b34a0553d7e6533555cc03"
+  dependencies:
+    loose-envify "^1.1.0"
+    symbol-observable "^1.2.0"
 
 regenerate@^1.2.1:
   version "1.3.3"
@@ -6815,6 +6807,10 @@ sw-toolbox@^3.4.0:
   dependencies:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
+
+symbol-observable@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.2.0.tgz#c22688aed4eab3cdc2dfeacbb561660560a00804"
 
 symbol-tree@^3.2.1:
   version "3.2.2"

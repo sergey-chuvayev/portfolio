@@ -12,14 +12,22 @@ class MainPage extends React.Component {
     }
   }
 
+  setCurrentCategory() {
+    let catName = this.props.match.params.category;
+    if (!catName)
+      catName = 'All Projects';
+    this.setState({
+      categoryName: catName
+    });
+  }
+
+  componentDidMount() {
+    this.setCurrentCategory();
+  }
+
   componentDidUpdate(props) {
     if (this.props.match !== props.match) {
-      let catName = this.props.match.params.category;
-      if (!catName)
-        catName = 'All Projects';
-      this.setState({
-        categoryName: catName
-      });
+      this.setCurrentCategory();
     }
   }
 
@@ -27,7 +35,8 @@ class MainPage extends React.Component {
 
     //reduce projects
     const projects = mockData.projects.reduce((list, project) => {
-      if (project.category.toLowerCase() === this.state.categoryName || this.state.categoryName === 'All Projects')
+      if (project.category.toLowerCase() === this.state.categoryName
+          || this.state.categoryName === 'All Projects')
         return [...list, project];
       return list;
     }, []);

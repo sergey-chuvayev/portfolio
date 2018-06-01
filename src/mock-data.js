@@ -15,7 +15,7 @@ const mockData = {
       name: 'Plazma',
       role: 'Frontend Developer & UX/UI Designer',
       description: 'Cloud based collaboration tool for professionals in media industry. Helps users keep their media structured, communicate with team and collegues in a propper way.',
-      roleDescription: 'Researching user behaviour, creating prototypes and implementing them in React.js (+ Redux). Having a big experience as the only frontend developer in the team.',
+      roleDescription: 'Researching user behaviour, creating prototypes and implementing them in React.js (+ Redux).',
       category: 'Web',
       startDate: new Date('2018-12-17'),
       endDate: new Date('2018-12-27')

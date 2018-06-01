@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './style.scss';
-
+import data from '../../mock-data.js';
 
 
 class ProjectPage extends React.Component {
@@ -16,29 +16,56 @@ class ProjectPage extends React.Component {
       'https://i.pinimg.com/564x/d3/20/3a/d3203af31412b648722d77a82e71517f.jpg',
       'https://i.pinimg.com/564x/3a/ba/95/3aba95640eb0f209d22753999d1d595a.jpg',
     ];
+
+    this.state = {
+      project: {}
+    }
+  }
+
+  componentDidMount() {
+    const projectId = parseInt(this.props.match.params.id);
+    this.setState({
+      project: data.projects.find((project) => {
+        if (project.id === projectId) {
+          return project;
+        }
+      })
+    });
   }
 
   render() {
+
+    const startDate = this.state.project.startDate;
+    const endDate = this.state.project.endDate;
+    const parsedStart = startDate && `${startDate.getUTCFullYear()}/${startDate.getUTCMonth()+1}/${startDate.getUTCDate()}`;
+    const parsedEnd = endDate && `${endDate.getUTCFullYear()}/${endDate.getUTCMonth()+1}/${endDate.getUTCDate()}`;
+    const dates = `${parsedStart} - ${parsedEnd}`;
+
+                      // m.getUTCFullYear() +"/"+ (m.getUTCMonth()+1) +"/"+ m.getUTCDate() + " " + m.getUTCHours() + ":" + m.getUTCMinutes() + ":" + m.getUTCSeconds();
     return (
       <div className={styles['container-inner']}>
         <div className={styles['top']}>
           <div className={styles['desc']}>
             <div className={styles['title']}>
-              Project Title
+              { this.state.project.name }
             </div>
             <div className={styles['text']}>
-              Eadweard James Muybridge was an English photographer important for his pioneering work in photographic studies of motion and in motion-picture projection.
+              { this.state.project.description }
+            </div>
+            <div className={styles['text']}>
+              <div>Role:</div>
+              { this.state.project.roleDescription }
             </div>
             <div className={styles['list']}>
               <ul>
-                <li>Published: 12.01.2008</li>
-                <li>Category: Artworks</li>
+                <li>Dates: {dates}</li>
+                <li>Category: {this.state.project.category}</li>
               </ul>
             </div>
-            <div className={styles['navigation']}>
+            {/*<div className={styles['navigation']}>
               <div className={styles['prev']}>&lt; previous project</div>
               <div className={styles['next']}>next project &gt;</div>
-            </div>
+            </div>*/}
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
