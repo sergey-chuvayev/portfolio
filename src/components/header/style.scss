@@ -30,6 +30,8 @@
   transition: opacity 150ms;
   cursor: pointer;
   opacity: .65;
+  text-decoration: none;
+  text-transform: capitalize;
   &:hover {
     opacity: 1;
   }

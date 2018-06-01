@@ -1,7 +1,7 @@
 import React from 'react';
-import classnames from 'classnames';
 import styles from './style.scss';
 import { Link } from 'react-router-dom';
+import mockData from '../../mock-data.js';
 
 class Header extends React.Component {
 	render() {
@@ -12,10 +12,12 @@ class Header extends React.Component {
         </div>
         <div className={styles['divider']}></div>
         <div className={styles['menu']}>
-          {this.props.data.categories.map((item, i) =>
+          {mockData.categories.map((item, i) =>
             <React.Fragment key={i}>
-              <span className={styles['item']}>{item}</span>
-              { this.props.data.categories.length - 1 !== i ?
+              <Link to={`/${item}`} className={styles['item']}>
+                {item}
+              </Link>
+              { mockData.categories.length - 1 !== i ?
                 (<span className={styles['coma']}>, </span>)
               : false }
             </React.Fragment>

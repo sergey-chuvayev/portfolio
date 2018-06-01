@@ -14,8 +14,8 @@ class Content extends React.Component {
     return (
       <div className={styles['container']}>
         <Switch>
-          <Route path="/" exact render={() => <MainPage projects={this.props.data.projects} />} />
-          <Route data={this.props.data} path="/project/:id" component={ProjectPage} />
+          <Route path="/:category" exact component={MainPage} />
+          <Route path="/project/:id" component={ProjectPage} />
           <Route component={MainPage} />
         </Switch>
       </div>
