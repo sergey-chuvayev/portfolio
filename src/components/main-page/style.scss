@@ -1,0 +1,37 @@
+.image {
+  margin-right: 50px;
+  background-image: url(../../assets/images/sergey.png);
+  background-size: cover; background-position: center;
+  width: 507px;
+}
+
+.projects {
+  padding-top: 1em;
+}
+
+.title {
+  font-size: 1.12em;
+  font-weight: lighter;
+  margin-bottom: 1.8em;
+  text-transform: capitalize;
+}
+
+.list {
+  li {
+    font-size: .88em;
+    margin-bottom: .86em;
+    font-weight: lighter;
+    a {
+      font-weight: bold;
+      opacity: .9;
+      text-decoration: none;
+      transition: opacity 150ms;
+      &:hover { opacity: 1; }
+    }
+  }
+}
+
+.container-inner {
+  display: flex;
+  flex-grow: 1;
+}
