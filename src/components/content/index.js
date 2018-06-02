@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './style.scss';
 import MainPage from '../main-page/';
 import ProjectPage from '../project-page/';
-
 import { Route, Switch, Redirect } from 'react-router-dom';
 
 class Content extends React.Component {

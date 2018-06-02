@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://sergey-chuvayev.github.io/sergey-chuvayev.github.io",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
@@ -26,6 +27,7 @@
     "extract-text-webpack-plugin": "3.0.2",
     "file-loader": "1.1.5",
     "fs-extra": "3.0.1",
+    "gh-pages": "^1.2.0",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "node-sass-chokidar": "^1.2.2",
@@ -54,7 +56,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "build-css": "node-sass-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "node-sass": "^4.9.0",
