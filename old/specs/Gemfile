@@ -1,4 +1,0 @@
-source :rubygems
-
-gem "selenium-client"
-gem 'rspec'
