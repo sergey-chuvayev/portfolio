@@ -24,7 +24,7 @@
   flex-direction: column;
   text-align: center;
   opacity: .7;
-  animation: blink 2s infinite alternate;
+  animation: blink 3s infinite alternate;
   span {
     &:first-child { margin-bottom: 10px; }
     &:last-child { font-size: 12px; }

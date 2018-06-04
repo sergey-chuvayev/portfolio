@@ -40,8 +40,8 @@ class ProjectPage extends React.Component {
     // dates
     const startDate = this.state.project.startDate;
     const endDate = this.state.project.endDate;
-    const parsedStart = startDate && `${startDate.getUTCFullYear()}/${startDate.getUTCMonth()+1}/${startDate.getUTCDate()}`;
-    const parsedEnd = endDate && `${endDate.getUTCFullYear()}/${endDate.getUTCMonth()+1}/${endDate.getUTCDate()}`;
+    const parsedStart = startDate && `${startDate.getUTCDate()}.${startDate.getUTCMonth()+1}.${startDate.getUTCFullYear()}`;
+    const parsedEnd = endDate && `${endDate.getUTCDate()}.${endDate.getUTCMonth()+1}.${endDate.getUTCFullYear()}`;
     const dates = `${parsedStart} - ${parsedEnd}`;
 
     return (
@@ -60,7 +60,7 @@ class ProjectPage extends React.Component {
             </div>
             <div className={styles['list']}>
               <ul>
-                <li>Dates: {dates}</li>
+                <li>{dates}</li>
                 <li>Category: {this.state.project.category}</li>
               </ul>
             </div>
