@@ -1,3 +1,5 @@
+@import "../../styles/mixins";
+
 .container {
   display: flex;
   flex-direction: column;
@@ -5,6 +7,17 @@
   min-height: 120px;
   max-height: 120px;
   justify-content: center;
+  @include respond(xxLarge, false) {
+    padding: 0 40px;
+  }
+  @include respond(xLarge, false) {
+    padding: 0 20px;
+  }
+  @include respond(medium, false) {
+    padding: 0 10px;
+    margin-bottom: 20px;
+    min-height: initial;
+  }
 }
 
 .item {

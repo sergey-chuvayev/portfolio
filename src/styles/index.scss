@@ -1,5 +1,6 @@
 @import "vars";
 @import "reset";
+@import "mixins";
 
 // fonts
 @font-face {
@@ -32,9 +33,6 @@
   font-style: normal;
 }
 
-// variables
-$transparency60: rgba(255, 255, 255, .6);
-
 body, html {
   scrollbar-face-color: ThreeDFace !important;
   scrollbar-shadow-color: ThreeDDarkShadow !important;
@@ -49,6 +47,9 @@ html {
   font-size: 14px;
   overflow: hidden;
   background-color: #1B1B1B;
+  @include respond(xLarge, false) {
+    overflow: initial;
+  }
 }
 
 body {

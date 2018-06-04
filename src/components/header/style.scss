@@ -1,4 +1,4 @@
-@import "framework";
+@import "../../styles/mixins";
 
 .header-container {
   display: flex;
@@ -6,8 +6,18 @@
   padding: 0 90px;
   min-height: 120px;
   max-height: 120px;
-  @include respond(small, false) {
+  @include respond(xxLarge, false) {
+    padding: 0 40px;
+  }
+  @include respond(xLarge, false) {
     padding: 0 20px;
+  }
+  @include respond(medium, false) {
+    padding: 0 10px;
+    flex-direction: column;
+    min-height: 70px;
+    align-items: baseline;
+    justify-content: center;
   }
 }
 
@@ -17,6 +27,9 @@
   a {
     text-decoration: none;
   }
+  @include respond(medium, false) {
+    margin-bottom: 10px;
+  }
 }
 
 .divider {
@@ -24,6 +37,9 @@
   height: 2.4em;
   width: 1px;
   background-color: rgba(255, 255, 255, .6);
+  @include respond(medium, false) {
+    display: none;
+  }
 }
 
 .menu {
