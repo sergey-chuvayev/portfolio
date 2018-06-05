@@ -13,7 +13,7 @@
   @include respond(xLarge, false) {
     padding: 0 20px;
   }
-  @include respond(medium, false) {
+  @include respond(large, false) {
     padding: 0 10px;
     margin-bottom: 20px;
     min-height: initial;

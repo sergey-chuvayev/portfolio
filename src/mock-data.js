@@ -8,7 +8,19 @@ const mockData = {
       roleDescription: 'I’ve prototyped, designed and implemented frontend of all base features of the application using Sketch as a prototyping and designing tool and Patternlab (atomic design framework) to create static pages.',
       category: 'Web',
       startDate: new Date('2016-05-10'),
-      endDate: new Date('2017-11-10')
+      endDate: new Date('2017-11-10'),
+      url: 'http://lobster.media/',
+      images: [
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png'
+      ]
     },
     {
       id: 2,
@@ -18,7 +30,17 @@ const mockData = {
       roleDescription: 'I researched user behaviour, created prototypes and implemented them in React.js (+ Redux). During the work on this project I had a very strong front-end mentor thanks to whom I aquired strong knowledge of this library.',
       category: 'Web',
       startDate: new Date('2018-12-17'),
-      endDate: new Date('2018-12-27')
+      endDate: new Date('2018-12-27'),
+      url: 'https://app.plazma.io/',
+      images: [
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2017.48.10.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.00.10.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.00.20.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.02.00.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.02.08.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.07.20.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2020.02.16.png'
+      ]
     },
     {
       id: 3,
@@ -28,7 +50,16 @@ const mockData = {
       roleDescription: 'I am co-founder of this project that we built with two of my friends. I was in charge of making the UX research and leading the tech and design team.',
       category: 'Mobile',
       startDate: new Date('2018-03-01'),
-      endDate: new Date('2018-05-01')
+      endDate: new Date('2018-05-01'),
+      url: '',
+      images: [
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_1_1.jpg',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_2_1.jpg',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_2_2.jpg',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_3_1.jpg',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_3_2.jpg',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/main_4_1.jpg',
+      ]
     },
     {
       id: 4,
@@ -38,7 +69,19 @@ const mockData = {
       roleDescription: 'I fully handled the digital part of this project: the concept and idea of the website, UX/UI and backend structure with two backend developers.',
       category: 'Web',
       startDate: new Date('2018-03-01'),
-      endDate: new Date('2018-05-01')
+      endDate: new Date('2018-05-01'),
+      url: 'https://berhasm.com/',
+      images: [
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png'
+      ]
     },
     {
       id: 5,
@@ -48,7 +91,19 @@ const mockData = {
       roleDescription: 'I made the structure of the website, created all the mockups and implemented them in React application',
       category: 'Web',
       startDate: new Date('2018-03-01'),
-      endDate: new Date('2018-05-01')
+      endDate: new Date('2018-05-01'),
+      url: 'https://exerica.com/',
+      images: [
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png'
+      ]
     },
   ],
   categories: ['web', 'design', 'music', 'mobile']

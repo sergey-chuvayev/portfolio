@@ -12,6 +12,10 @@
   @include respond(xLarge, false) {
     padding: 0 20px;
   }
+  @include respond(large, false) {
+    padding: 0 10px;
+    min-height: 70px;
+  }
   @include respond(medium, false) {
     padding: 0 10px;
     flex-direction: column;

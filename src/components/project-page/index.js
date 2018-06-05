@@ -8,15 +8,15 @@ class ProjectPage extends React.Component {
     super(props);
 
     this.images = [
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
-      'https://firebasestorage.googleapis.com/v0/b/portfolio-205915.appspot.com/o/Screen%20Shot%202018-05-29%20at%2000.00.14.png?alt=media&token=81dc6577-c917-4977-a199-d0ba903de095',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
+      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png',
     ];
 
     this.state = {
@@ -62,6 +62,9 @@ class ProjectPage extends React.Component {
               <ul>
                 <li>{dates}</li>
                 <li>Category: {this.state.project.category}</li>
+                <li>
+                  <a href={this.state.project.url} target="_blank">{this.state.project.url}</a>
+                </li>
               </ul>
             </div>
             {/*<div className={styles['navigation']}>
@@ -71,10 +74,8 @@ class ProjectPage extends React.Component {
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
-              {this.images.map((image, i) =>
-                <div key={i} className={styles['img']}>
-                  <img src={image} />
-                </div>
+              {this.state.project.images && this.state.project.images.map((image, i) =>
+                <div key={i} className={styles['img']} style={{ backgroundImage: `url(${image})` }}></div>
               )}
             </div>
           </div>
