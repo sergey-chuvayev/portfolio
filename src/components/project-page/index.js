@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './style.scss';
 import data from '../../mock-data.js';
 
@@ -6,18 +7,6 @@ import data from '../../mock-data.js';
 class ProjectPage extends React.Component {
   constructor(props) {
     super(props);
-
-    this.images = [
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
-      'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png',
-    ];
 
     this.state = {
       project: {}
@@ -67,10 +56,9 @@ class ProjectPage extends React.Component {
                 </li>
               </ul>
             </div>
-            {/*<div className={styles['navigation']}>
-              <div className={styles['prev']}>&lt; previous project</div>
-              <div className={styles['next']}>next project &gt;</div>
-            </div>*/}
+            <div className={styles['navigation']}>
+              <div className={styles['prev']} onClick={() => this.props.history.goBack()}>&lt; back</div>
+            </div>
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>

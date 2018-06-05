@@ -3,9 +3,12 @@ import ReactDOM from 'react-dom';
 import './styles/index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
 
-ReactDOM.render(<BrowserRouter basename={process.env.PUBLIC_URL}>
+const history = createBrowserHistory()
+
+ReactDOM.render(<Router history={history} basename={process.env.PUBLIC_URL}>
                   <App/>
-                </BrowserRouter>, document.getElementById('root'));
+                </Router>, document.getElementById('root'));
 registerServiceWorker();
