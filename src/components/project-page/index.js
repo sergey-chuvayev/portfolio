@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styles from './style.scss';
 import renderHTML from 'react-render-html';
 import data from '../../mock-data.js';
@@ -64,7 +63,7 @@ class ProjectPage extends React.Component {
               <ul>
                 {/*<li>{dates}</li>*/}
                 <li>Category: {Array.isArray(this.state.project.category)
-                              && this.state.project.category.map((item, i) => <span>{item}</span>)}
+                              && this.state.project.category.map((item, i) => <span key={`cat${i}`}>{item}</span>)}
                 </li>
                 <li>
                   <a href={this.state.project.url} target="_blank">{this.state.project.url}</a>
@@ -80,7 +79,7 @@ class ProjectPage extends React.Component {
               {this.state.project.category && this.state.project.category.includes('music') ? (
                 <div className={styles['music']}>
                   {this.state.project.iframes.map((iframe, i) =>
-                    <div className={styles['music-item']}>
+                    <div key={`iframes${i}`} className={styles['music-item']}>
                       {renderHTML(iframe)}
                     </div>
                   )}
