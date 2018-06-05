@@ -16,9 +16,14 @@ class MainPage extends React.Component {
     let catName = this.props.match.params.category;
     if (!catName)
       catName = 'All Projects';
-    this.setState({
-      categoryName: catName
-    });
+
+    if (mockData.categories.includes(catName)) {
+      this.setState({
+        categoryName: catName
+      });
+    } else {
+      this.props.history.push('/');
+    }
   }
 
   componentDidMount() {
