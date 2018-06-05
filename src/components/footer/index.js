@@ -9,6 +9,7 @@ class Footer extends React.Component {
           You’re watching the portfolio of Sergey Chuvayev
         </div>
         <div className={styles['item']}>
+          <a href="https://www.linkedin.com/in/sergeychuvayev/" target="_blanc">linkedin</a>,&nbsp;
           <a href="https://www.facebook.com/sergeychuvayev" target="_blanc">facebook</a>,&nbsp;
           <a href="https://soundcloud.com/sergeyaugust" target="_blanc">soundcloud</a>,&nbsp;
           <a href="https://github.com/sergey-chuvayev/" target="_blanc">github</a>,&nbsp;

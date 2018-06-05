@@ -98,6 +98,21 @@
   background-repeat: no-repeat;
 }
 
+.music {
+  width: 100%;
+}
+
+.music-item {
+  margin-top: 30px;
+  &:last-child { padding-bottom: 30px; }
+}
+
+.role {
+  b {
+    display: block;
+  }
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;

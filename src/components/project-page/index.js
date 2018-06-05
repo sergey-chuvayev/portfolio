@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './style.scss';
+import renderHTML from 'react-render-html';
 import data from '../../mock-data.js';
 
 
@@ -44,8 +45,11 @@ class ProjectPage extends React.Component {
               { this.state.project.description }
             </div>
             <div className={styles['text']}>
-              <div>Role:</div>
-              { this.state.project.roleDescription }
+              {this.state.project.roleDescription ?
+                  <div className={styles['role']}>
+                    <b>Role:</b> {this.state.project.roleDescription}
+                  </div>
+              : false}
             </div>
             <div className={styles['list']}>
               <ul>
@@ -64,9 +68,18 @@ class ProjectPage extends React.Component {
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
-              {this.state.project.images && this.state.project.images.map((image, i) =>
-                <div key={i} className={styles['img']} style={{ backgroundImage: `url(${image})` }}></div>
-              )}
+              {this.state.project.category && this.state.project.category.includes('music') ? (
+                <div className={styles['music']}>
+                  {this.state.project.iframes.map((iframe, i) =>
+                    <div className={styles['music-item']}>
+                      {renderHTML(iframe)}
+                    </div>
+                  )}
+                </div>
+              ) :
+                this.state.project.images && this.state.project.images.map((image, i) =>
+                  <div key={i} className={styles['img']} style={{ backgroundImage: `url(${image})` }}></div>)
+              }
             </div>
           </div>
         </div>
