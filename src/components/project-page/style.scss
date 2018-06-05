@@ -40,6 +40,17 @@
       margin-bottom: .8em;
       font-weight: lighter;
       &:last-child { margin-bottom: 0; }
+      > span {
+        text-transform: capitalize;
+        &:after {
+          content: ', ';
+        }
+        &:last-child {
+         &:after {
+           content: '';
+         }
+        }
+      }
     }
   }
 }
@@ -90,7 +101,7 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  margin-top: 4em;
+  margin-top: 2em;
   .prev, .next {
     opacity: .6;
     font-size: .8em;

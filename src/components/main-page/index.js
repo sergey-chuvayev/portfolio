@@ -35,7 +35,7 @@ class MainPage extends React.Component {
 
     //reduce projects
     const projects = mockData.projects.reduce((list, project) => {
-      if (project.category.toLowerCase() === this.state.categoryName
+      if (project.category.includes(this.state.categoryName)
           || this.state.categoryName === 'All Projects')
         return [...list, project];
       return list;

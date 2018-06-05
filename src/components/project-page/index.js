@@ -26,12 +26,12 @@ class ProjectPage extends React.Component {
 
   render() {
 
-    // dates
-    const startDate = this.state.project.startDate;
-    const endDate = this.state.project.endDate;
-    const parsedStart = startDate && `${startDate.getUTCDate()}.${startDate.getUTCMonth()+1}.${startDate.getUTCFullYear()}`;
-    const parsedEnd = endDate && `${endDate.getUTCDate()}.${endDate.getUTCMonth()+1}.${endDate.getUTCFullYear()}`;
-    const dates = `${parsedStart} - ${parsedEnd}`;
+    // dates make soon
+    // const startDate = this.state.project.startDate;
+    // const endDate = this.state.project.endDate;
+    // const parsedStart = startDate && `${startDate.getUTCDate()}.${startDate.getUTCMonth()+1}.${startDate.getUTCFullYear()}`;
+    // const parsedEnd = endDate && `${endDate.getUTCDate()}.${endDate.getUTCMonth()+1}.${endDate.getUTCFullYear()}`;
+    // const dates = `${parsedStart} - ${parsedEnd}`;
 
     return (
       <div className={styles['container-inner']}>
@@ -49,8 +49,10 @@ class ProjectPage extends React.Component {
             </div>
             <div className={styles['list']}>
               <ul>
-                <li>{dates}</li>
-                <li>Category: {this.state.project.category}</li>
+                {/*<li>{dates}</li>*/}
+                <li>Category: {Array.isArray(this.state.project.category)
+                              && this.state.project.category.map((item, i) => <span>{item}</span>)}
+                </li>
                 <li>
                   <a href={this.state.project.url} target="_blank">{this.state.project.url}</a>
                 </li>
