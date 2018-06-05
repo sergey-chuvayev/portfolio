@@ -10,8 +10,17 @@ class ProjectPage extends React.Component {
     super(props);
 
     this.state = {
-      project: {}
+      project: {},
+      imageStatus: 'loading'
     }
+  }
+
+  handleImageLoaded() {
+    this.setState({ imageStatus: 'loaded' });
+  }
+
+  handleImageErrored() {
+    this.setState({ imageStatus: 'failed to load' });
   }
 
   componentDidMount() {
@@ -78,7 +87,9 @@ class ProjectPage extends React.Component {
                 </div>
               ) :
                 this.state.project.images && this.state.project.images.map((image, i) =>
-                  <div key={i} className={styles['img']} style={{ backgroundImage: `url(${image})` }}></div>)
+                  <div key={i} className={styles['img']}>
+                    <img src={image} />
+                  </div>)
               }
             </div>
           </div>

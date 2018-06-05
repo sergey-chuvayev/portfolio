@@ -79,23 +79,11 @@
 
 .img {
   margin-top: 2em;
-  height: 60vh;
-  @include respond(xxxLarge, false) {
-    height: 500px;
+  img {
+    width: 100%;
+    height: 80vh;
+    object-fit: contain;
   }
-  @include respond(xxLarge, false) {
-    height: 400px;
-  }
-  @include respond(xLarge, false) {
-    height: 300px;
-  }
-  @include respond(large, false) {
-    height: 200px;
-  }
-  width: 100%;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 .music {
