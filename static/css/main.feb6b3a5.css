@@ -77,6 +77,9 @@ html {
   font-size: 14px;
   overflow: hidden;
   background-color: #1B1B1B; }
+  @media screen and (max-width: 1023px) {
+    html {
+      overflow: initial; } }
 
 body {
   margin: 0;
@@ -97,6 +100,9 @@ body {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between; }
+  @media screen and (max-width: 767px) {
+    .style__root-container__29llH {
+      height: initial; } }
 .style__header-container__1Alpq {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -107,18 +113,48 @@ body {
   padding: 0 90px;
   min-height: 120px;
   max-height: 120px; }
+  @media screen and (max-width: 1200px) {
+    .style__header-container__1Alpq {
+      padding: 0 40px; } }
+  @media screen and (max-width: 1023px) {
+    .style__header-container__1Alpq {
+      padding: 0 20px; } }
+  @media screen and (max-width: 767px) {
+    .style__header-container__1Alpq {
+      padding: 0 10px;
+      min-height: 70px; } }
+  @media screen and (max-width: 600px) {
+    .style__header-container__1Alpq {
+      padding: 0 10px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      min-height: 70px;
+      -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
 
 .style__logo__2O85F {
   font-weight: bold;
   font-size: 1.12em; }
   .style__logo__2O85F a {
     text-decoration: none; }
+  @media screen and (max-width: 600px) {
+    .style__logo__2O85F {
+      margin-bottom: 10px; } }
 
 .style__divider__2ROhm {
   margin: 0 2em;
   height: 2.4em;
   width: 1px;
   background-color: rgba(255, 255, 255, 0.6); }
+  @media screen and (max-width: 600px) {
+    .style__divider__2ROhm {
+      display: none; } }
 
 .style__item__140nq {
   font-size: .8em;
@@ -151,6 +187,17 @@ body {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center; }
+  @media screen and (max-width: 1200px) {
+    .style__container__1H1am {
+      padding: 0 40px; } }
+  @media screen and (max-width: 1023px) {
+    .style__container__1H1am {
+      padding: 0 20px; } }
+  @media screen and (max-width: 767px) {
+    .style__container__1H1am {
+      padding: 0 10px;
+      margin-bottom: 20px;
+      min-height: initial; } }
 
 .style__item__1pfEc {
   margin-bottom: 8px;
@@ -169,6 +216,15 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column; }
+  @media screen and (max-width: 1200px) {
+    .style__container__146RD {
+      padding: 0 40px; } }
+  @media screen and (max-width: 1023px) {
+    .style__container__146RD {
+      padding: 0 20px; } }
+  @media screen and (max-width: 767px) {
+    .style__container__146RD {
+      padding: 0 10px; } }
 .style__image__n5Ibj {
   margin-right: 50px;
   background-image: url(/portfolio/static/media/sergey.bd656cac.png);
@@ -184,11 +240,18 @@ body {
   font-weight: lighter;
   margin-bottom: 1.8em;
   text-transform: capitalize; }
+  @media screen and (max-width: 600px) {
+    .style__title__1yWUU {
+      margin-bottom: .6em; } }
 
 .style__list__eSIP_ li {
   font-size: .88em;
   margin-bottom: .86em;
   font-weight: lighter; }
+  @media screen and (max-width: 767px) {
+    .style__list__eSIP_ li {
+      line-height: 1.4em;
+      font-size: .8em; } }
   .style__list__eSIP_ li a {
     font-weight: bold;
     opacity: .9;
@@ -204,7 +267,11 @@ body {
   display: flex;
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
-  flex-grow: 1; }
+  flex-grow: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 .style__container-inner__E6_Mu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -228,6 +295,12 @@ body {
   -ms-flex-pack: justify;
   justify-content: space-between;
   margin-bottom: 2em; }
+  @media screen and (max-width: 767px) {
+    .style__top__OI5wH {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column; } }
 
 .style__desc__1tMHH {
   max-width: 340px;
@@ -245,7 +318,7 @@ body {
 
 .style__list__1eykw ul li {
   font-size: .88em;
-  margin-bottom: .4em;
+  margin-bottom: .8em;
   font-weight: lighter; }
   .style__list__1eykw ul li:last-child {
     margin-bottom: 0; }
@@ -255,6 +328,11 @@ body {
   overflow: overlay;
   height: 100vh;
   margin-top: -120px; }
+  @media screen and (max-width: 767px) {
+    .style__content__1-Uy6 {
+      height: initial;
+      width: 100%;
+      margin-top: 0; } }
 
 .style__content-inner__1G2MB {
   display: -webkit-box;
@@ -268,11 +346,29 @@ body {
   -ms-flex-align: center;
   align-items: center;
   padding-top: 20px; }
+  @media screen and (max-width: 600px) {
+    .style__content-inner__1G2MB {
+      padding-top: 0; } }
 
 .style__img__3HL8m {
-  margin-top: 2em; }
-  .style__img__3HL8m img {
-    max-width: 100%; }
+  margin-top: 2em;
+  height: 60vh;
+  width: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
+  @media screen and (max-width: 1350px) {
+    .style__img__3HL8m {
+      height: 500px; } }
+  @media screen and (max-width: 1200px) {
+    .style__img__3HL8m {
+      height: 400px; } }
+  @media screen and (max-width: 1023px) {
+    .style__img__3HL8m {
+      height: 300px; } }
+  @media screen and (max-width: 767px) {
+    .style__img__3HL8m {
+      height: 200px; } }
 
 .style__navigation__3bUqX {
   display: -webkit-box;
@@ -336,11 +432,11 @@ body {
   flex-direction: column;
   text-align: center;
   opacity: .7;
-  -webkit-animation: style__blink__3estE 2s infinite alternate;
-  animation: style__blink__3estE 2s infinite alternate; }
+  -webkit-animation: style__blink__3estE 3s infinite alternate;
+  animation: style__blink__3estE 3s infinite alternate; }
   .style__logo__35WSj span:first-child {
     margin-bottom: 10px; }
   .style__logo__35WSj span:last-child {
     font-size: 12px; }
 
-/*# sourceMappingURL=main.7f4ee3cc.css.map*/
+/*# sourceMappingURL=main.feb6b3a5.css.map*/
