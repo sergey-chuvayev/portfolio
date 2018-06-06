@@ -15,7 +15,7 @@
   }
   @include respond(large, false) {
     padding: 0 10px;
-    margin-bottom: 20px;
+    margin: 20px 0;
     min-height: initial;
   }
 }
