@@ -6,8 +6,8 @@ import { Link } from 'react-router-dom';
 import mockData from '../../mock-data.js';
 
 @inject('uiStore')
-
-@observer class MainPage extends React.Component {
+@observer
+class MainPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,7 +28,7 @@ import mockData from '../../mock-data.js';
 
   componentDidMount() {
     this.setCurrentCategory();
-    // console.log(this.props.uiStore);
+    this.props.uiStore.currentPage = 'MainPage';
   }
 
   componentDidUpdate(props) {

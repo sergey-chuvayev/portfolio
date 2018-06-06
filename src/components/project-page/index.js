@@ -1,10 +1,14 @@
 import React from 'react';
+import { observer, inject } from 'mobx-react';
+import { observable, action } from 'mobx';
 import styles from './style.scss';
 import renderHTML from 'react-render-html';
 import data from '../../mock-data.js';
 
-
+@inject('uiStore')
 class ProjectPage extends React.Component {
+  @observable project;
+
   constructor(props) {
     super(props);
 
@@ -23,6 +27,7 @@ class ProjectPage extends React.Component {
   }
 
   componentDidMount() {
+    this.props.uiStore.currentPage = 'ProjectPage';
     const projectId = parseInt(this.props.match.params.id);
     this.setState({
       project: data.projects.find((project) => {
