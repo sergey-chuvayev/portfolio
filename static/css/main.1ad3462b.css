@@ -198,7 +198,7 @@ body {
   @media screen and (max-width: 767px) {
     .style__container__1H1am {
       padding: 0 10px;
-      margin-bottom: 20px;
+      margin: 20px 0;
       min-height: initial; } }
 
 .style__item__1pfEc {
@@ -534,4 +534,4 @@ body {
   .style__logo__35WSj span:last-child {
     font-size: 12px; }
 
-/*# sourceMappingURL=main.237a8074.css.map*/
+/*# sourceMappingURL=main.1ad3462b.css.map*/
