@@ -12,14 +12,15 @@ const mockData = {
       url: 'http://lobster.media/',
       images: [
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.00.14.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/lob1.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/lob2.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/lob3.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/lob4.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.04.30.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.02.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.05.54.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.11.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.21.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.37.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.52.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.05.57.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-05-29%20at%2000.06.12.png'
       ]
     },
     {
@@ -34,12 +35,12 @@ const mockData = {
       url: 'https://app.plazma.io/',
       images: [
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2017.48.10.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.00.10.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.00.20.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.02.00.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.02.08.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2018.07.20.png',
-        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-04%20at%2020.02.16.png'
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.27.43.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.27.37.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.20.50.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.22.31.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.28.23.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-06%20at%2017.25.17.png'
       ]
     },
     {
@@ -70,7 +71,7 @@ const mockData = {
       category: ['web', 'design'],
       startDate: new Date('2018-03-01'),
       endDate: new Date('2018-05-01'),
-      url: 'https://berhasm.com/',
+      // url: 'https://berhasm.com/',
       images: [
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/catalog.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/item-page.png',

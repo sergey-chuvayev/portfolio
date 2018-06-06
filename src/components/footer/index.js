@@ -10,7 +10,7 @@ class Footer extends React.Component {
     return (
       <footer className={classnames(styles['container'])}>
         <div className={styles['item']}>
-          You’re watching the portfolio of Sergey Chuvayev  {this.props.uiStore.currentPage}
+          You’re watching the portfolio of Sergey Chuvayev
         </div>
         <div className={styles['item']}>
           <a href="https://www.linkedin.com/in/sergeychuvayev/" target="_blanc">linkedin</a>,&nbsp;
