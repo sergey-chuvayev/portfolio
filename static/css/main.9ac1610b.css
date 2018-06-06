@@ -77,8 +77,9 @@ html {
   font-size: 14px;
   overflow: hidden;
   background-color: #1B1B1B; }
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 600px) {
     html {
+      font-size: 18px;
       overflow: initial; } }
 
 body {
@@ -305,6 +306,9 @@ body {
 .style__desc__1tMHH {
   max-width: 340px;
   padding-top: 1em; }
+  @media screen and (min-width: 767px) {
+    .style__desc__1tMHH {
+      margin-right: 1.8em; } }
 
 .style__title__TEglP {
   font-size: 1.12em;
@@ -338,7 +342,8 @@ body {
     .style__content__1-Uy6 {
       height: initial;
       width: 100%;
-      margin-top: 0; } }
+      margin-top: 0;
+      overflow: initial; } }
 
 .style__content-inner__1G2MB {
   display: -webkit-box;
@@ -363,6 +368,9 @@ body {
     height: 60vh;
     -o-object-fit: contain;
     object-fit: contain; }
+    @media screen and (max-width: 1200px) {
+      .style__img__3HL8m img {
+        height: initial; } }
 
 .style__music__NxKIH {
   width: 100%; }
@@ -444,4 +452,4 @@ body {
   .style__logo__35WSj span:last-child {
     font-size: 12px; }
 
-/*# sourceMappingURL=main.90a78742.css.map*/
+/*# sourceMappingURL=main.9ac1610b.css.map*/
