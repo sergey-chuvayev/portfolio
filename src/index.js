@@ -19,7 +19,7 @@ const stores = {
 
 ReactDOM.render(
   <Provider {...stores}>
-    <HashRouter history={history} basename="/portfolio">
+    <HashRouter history={history} basename={process.env.PUBLIC_URL}>
       <App/>
     </HashRouter>
   </Provider>
