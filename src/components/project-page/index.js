@@ -2,6 +2,7 @@ import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { observable, action } from 'mobx';
 import styles from './style.scss';
+import Spinner from '../spinner';
 import renderHTML from 'react-render-html';
 import data from '../../mock-data.js';
 
