@@ -92,6 +92,7 @@ const mockData = {
       images: [
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-05%20at%2013.46.26.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/Screen%20Shot%202018-06-05%20at%2013.47.18.png',
+        'https://storage.googleapis.com/sergeychuvayevportfolioimages/ex1.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/exerica6.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/exerica8.png',
         'https://storage.googleapis.com/sergeychuvayevportfolioimages/exerica1.png',
