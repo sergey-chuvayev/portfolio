@@ -1,9 +1,13 @@
 import React from 'react';
+import { observer, inject } from 'mobx-react';
+import { action } from 'mobx';
 import styles from './style.scss';
 import { Link } from 'react-router-dom';
 import mockData from '../../mock-data.js';
 
-class MainPage extends React.Component {
+@inject('uiStore')
+
+@observer class MainPage extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,6 +28,7 @@ class MainPage extends React.Component {
 
   componentDidMount() {
     this.setCurrentCategory();
+    // console.log(this.props.uiStore);
   }
 
   componentDidUpdate(props) {
