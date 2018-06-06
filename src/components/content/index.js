@@ -15,7 +15,7 @@ class Content extends React.Component {
         <Switch>
           <Route path="/:category" exact component={MainPage} />
           <Route path="/project/:id" component={ProjectPage} />
-          <Route path={"/portfolio"} component={MainPage} />
+          <Route path="/" component={MainPage} />
           <Route component={MainPage} />
         </Switch>
       </div>
