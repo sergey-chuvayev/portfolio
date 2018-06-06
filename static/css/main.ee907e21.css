@@ -74,7 +74,7 @@ body, html {
   scrollbar-arrow-color: ButtonText !important; }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
   overflow: hidden;
   background-color: #1B1B1B; }
   @media screen and (max-width: 600px) {
@@ -534,4 +534,4 @@ body {
   .style__logo__35WSj span:last-child {
     font-size: 12px; }
 
-/*# sourceMappingURL=main.1ad3462b.css.map*/
+/*# sourceMappingURL=main.ee907e21.css.map*/
