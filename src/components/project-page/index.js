@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { observable, action } from 'mobx';
+import { Scrollbars } from 'react-custom-scrollbars';
 import ym from 'react-yandex-metrika';
 import styles from './style.scss';
 import Spinner from '../spinner';
@@ -88,20 +89,22 @@ class ProjectPage extends React.Component {
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
-              {this.state.project.category && this.state.project.category.includes('music') ? (
-                <div className={styles['music']}>
-                  {this.state.project.iframes.map((iframe, i) =>
-                    <div key={`iframes${i}`} className={styles['music-item']}>
-                      {renderHTML(iframe)}
-                    </div>
-                  )}
-                </div>
-              ) :
-                this.state.project.images && this.state.project.images.map((image, i) =>
-                  <div key={i} className={styles['img']}>
-                    <img src={image} />
-                  </div>)
-              }
+              <Scrollbars autoHeight autoHeightMax="100vh">
+                {this.state.project.category && this.state.project.category.includes('music') ? (
+                  <div className={styles['music']}>
+                    {this.state.project.iframes.map((iframe, i) =>
+                      <div key={`iframes${i}`} className={styles['music-item']}>
+                        {renderHTML(iframe)}
+                      </div>
+                    )}
+                  </div>
+                ) :
+                  this.state.project.images && this.state.project.images.map((image, i) =>
+                    <div key={i} className={styles['img']}>
+                      <img src={image} />
+                    </div>)
+                }
+              </Scrollbars>
             </div>
           </div>
         </div>

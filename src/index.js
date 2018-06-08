@@ -5,7 +5,7 @@ import { observer, Provider } from 'mobx-react';
 import './styles/index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 import UiStore from './stores/ui-store';
@@ -22,9 +22,9 @@ ReactDOM.render(
   <React.Fragment>
     <YMInitializer accounts={[49184389]} version="2" />
     <Provider {...stores}>
-      <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+      <HashRouter history={history} basename={process.env.PUBLIC_URL}>
         <App/>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   </React.Fragment>
   , document.getElementById('root'));
