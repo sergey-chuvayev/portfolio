@@ -20,7 +20,7 @@ const stores = {
 
 ReactDOM.render(
   <React.Fragment>
-    <YMInitializer accounts={[49184389]} />
+    <YMInitializer accounts={[49184389]} version="2" />
     <Provider {...stores}>
       <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
         <App/>
