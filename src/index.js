@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { YMInitializer } from 'react-yandex-metrika';
 import { observer, Provider } from 'mobx-react';
 import './styles/index.scss';
 import App from './App';
@@ -18,10 +19,13 @@ const stores = {
 };
 
 ReactDOM.render(
-  <Provider {...stores}>
-    <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
-      <App/>
-    </BrowserRouter>
-  </Provider>
+  <React.Fragment>
+    <YMInitializer accounts={[49184389]} />
+    <Provider {...stores}>
+      <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
+        <App/>
+      </BrowserRouter>
+    </Provider>
+  </React.Fragment>
   , document.getElementById('root'));
 registerServiceWorker();

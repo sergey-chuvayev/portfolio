@@ -1,6 +1,7 @@
 import React from 'react';
 import { observer, inject } from 'mobx-react';
 import { observable, action } from 'mobx';
+import ym from 'react-yandex-metrika';
 import styles from './style.scss';
 import Spinner from '../spinner';
 import renderHTML from 'react-render-html';
@@ -29,6 +30,7 @@ class ProjectPage extends React.Component {
 
   componentDidMount() {
     this.props.uiStore.currentPage = 'ProjectPage';
+
     const projectId = parseInt(this.props.match.params.id);
     this.setState({
       project: data.projects.find((project) => {
@@ -37,9 +39,13 @@ class ProjectPage extends React.Component {
         }
       })
     });
+
+
+    // ym('hit', `project name: ${}`);
   }
 
   render() {
+    // console.log(`project name: ${this.state.project && this.state.project.name}`);
 
     // dates make soon
     // const startDate = this.state.project.startDate;
