@@ -4,7 +4,7 @@ import { observer, Provider } from 'mobx-react';
 import './styles/index.scss';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
 
 import UiStore from './stores/ui-store';
@@ -19,9 +19,9 @@ const stores = {
 
 ReactDOM.render(
   <Provider {...stores}>
-    <HashRouter history={history} basename={process.env.PUBLIC_URL}>
+    <BrowserRouter history={history} basename={process.env.PUBLIC_URL}>
       <App/>
-    </HashRouter>
+    </BrowserRouter>
   </Provider>
   , document.getElementById('root'));
 registerServiceWorker();
