@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://sergey-chuvayev.github.io/portfolio",
+  "homepage": "http://sergey-chuvayev.github.io/",
   "dependencies": {
     "autoprefixer": "7.1.6",
     "babel-core": "6.26.0",
