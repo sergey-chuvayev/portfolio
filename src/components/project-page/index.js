@@ -89,7 +89,7 @@ class ProjectPage extends React.Component {
           </div>
           <div className={styles['content']}>
             <div className={styles['content-inner']}>
-              <Scrollbars autoHeight autoHeightMax="100vh">
+              {/*<Scrollbars autoHeight autoHeightMax="100vh">*/}
                 {this.state.project.category && this.state.project.category.includes('music') ? (
                   <div className={styles['music']}>
                     {this.state.project.iframes.map((iframe, i) =>
@@ -104,7 +104,7 @@ class ProjectPage extends React.Component {
                       <img src={image} />
                     </div>)
                 }
-              </Scrollbars>
+              {/*</Scrollbars>*/}
             </div>
           </div>
         </div>
