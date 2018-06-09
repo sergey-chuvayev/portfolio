@@ -45,22 +45,22 @@ a {
 
 @font-face {
   font-family: 'HelveticaNeueLT';
-  src: url(/portfolio/static/media/helvetica-neue-lt-thin.aac7c0fc.eot);
-  src: url(/portfolio/static/media/helvetica-neue-lt-thin.aac7c0fc.eot?#iefix) format("embedded-opentype"), url(/portfolio/static/media/helvetica-neue-lt-thin.f25d4f0e.woff) format("woff"), url(/portfolio/static/media/helvetica-neue-lt-thin.957c7a8c.otf) format("opentype");
+  src: url(/static/media/helvetica-neue-lt-thin.aac7c0fc.eot);
+  src: url(/static/media/helvetica-neue-lt-thin.aac7c0fc.eot?#iefix) format("embedded-opentype"), url(/static/media/helvetica-neue-lt-thin.f25d4f0e.woff) format("woff"), url(/static/media/helvetica-neue-lt-thin.957c7a8c.otf) format("opentype");
   font-weight: 100;
   font-style: normal; }
 
 @font-face {
   font-family: 'HelveticaNeueLT';
-  src: url(/portfolio/static/media/helvetica-neue-lt-light.f373868c.eot);
-  src: url(/portfolio/static/media/helvetica-neue-lt-light.f373868c.eot?#iefix) format("embedded-opentype"), url(/portfolio/static/media/helvetica-neue-lt-light.4ddbadcb.woff) format("woff"), url(/portfolio/static/media/helvetica-neue-lt-light.06137036.otf) format("opentype");
+  src: url(/static/media/helvetica-neue-lt-light.f373868c.eot);
+  src: url(/static/media/helvetica-neue-lt-light.f373868c.eot?#iefix) format("embedded-opentype"), url(/static/media/helvetica-neue-lt-light.4ddbadcb.woff) format("woff"), url(/static/media/helvetica-neue-lt-light.06137036.otf) format("opentype");
   font-weight: normal;
   font-style: normal; }
 
 @font-face {
   font-family: 'HelveticaNeueLT';
-  src: url(/portfolio/static/media/helvetica-neue-lt-bold.f16f6414.eot);
-  src: url(/portfolio/static/media/helvetica-neue-lt-bold.f16f6414.eot?#iefix) format("embedded-opentype"), url(/portfolio/static/media/helvetica-neue-lt-bold.417e7d97.woff) format("woff"), url(/portfolio/static/media/helvetica-neue-lt-bold.9ac7e2ff.otf) format("opentype");
+  src: url(/static/media/helvetica-neue-lt-bold.f16f6414.eot);
+  src: url(/static/media/helvetica-neue-lt-bold.f16f6414.eot?#iefix) format("embedded-opentype"), url(/static/media/helvetica-neue-lt-bold.417e7d97.woff) format("woff"), url(/static/media/helvetica-neue-lt-bold.9ac7e2ff.otf) format("opentype");
   font-weight: bold;
   font-style: normal; }
 
@@ -229,7 +229,7 @@ body {
       padding: 0 10px; } }
 .style__image__n5Ibj {
   margin-right: 50px;
-  background-image: url(/portfolio/static/media/sergey.bd656cac.png);
+  background-image: url(/static/media/sergey.bd656cac.png);
   background-size: cover;
   background-position: center;
   width: 507px; }
@@ -357,7 +357,7 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding-top: 20px; }
+  height: 100%; }
   @media screen and (max-width: 600px) {
     .style__content-inner__1G2MB {
       padding-top: 0; } }
@@ -534,4 +534,4 @@ body {
   .style__logo__35WSj span:last-child {
     font-size: 12px; }
 
-/*# sourceMappingURL=main.ee907e21.css.map*/
+/*# sourceMappingURL=main.b103b42b.css.map*/
