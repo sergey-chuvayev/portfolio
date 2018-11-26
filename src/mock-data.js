@@ -133,19 +133,16 @@ const mockData = {
     },
     {
       id: 7,
-      name: 'Aadhyaatmik EP',
+      name: 'Lykke Manue EP',
       role: 'Musician',
-      description: 'These four tracks are waiting for their release on Morphosis records.',
+      description: 'Lykke Manue EP characterized by melancholic melodies and slow beats, a deep journey into electronic music by Russian producer Sergei August.',
       roleDescription: '',
       category: ['music'],
-      startDate: new Date('2018-03-01'),
-      endDate: new Date('2018-05-01'),
-      url: '',
+      startDate: new Date('2018-11-02'),
+      endDate: new Date('2018-11-02'),
+      url: 'http://www.morphosisrecords.com/release/morph137.php',
       iframes: [
-        '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/405310401&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-        '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/401868144&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-        '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/359484320&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
-        '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/353851478&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
+        '<iframe width="100%" height="450" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/635909754&color=%23414141&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>'
       ]
     },
   ],
