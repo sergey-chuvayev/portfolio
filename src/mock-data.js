@@ -1,6 +1,23 @@
 const mockData = {
   projects: [
     {
+      id: 0,
+      name: 'Chagg',
+      role: 'Frontend Developer',
+      description: 'Software solution for vehicle advanced connectivity by means of smart aggregation of multiple wireless network technologies (network bonding of LTE, 3G, WiFi).',
+      roleDescription: 'I am responsible for the design and development process of a team in one of the applications of that project. And as a frontend engineer I develop this app with the following stack: React, Redux, Typescript, Styled Components.',
+      category: ['web'],
+      startDate: new Date('2016-05-10'),
+      endDate: null,
+      url: 'https://qoollo.com/products/chagg.html',
+      images: [
+        'https://storage.googleapis.com/portfolio-205915.appspot.com/chagg/Screenshot%202018-11-26%20at%2013.14.37.png',
+        'https://storage.googleapis.com/portfolio-205915.appspot.com/chagg/Screenshot%202018-11-26%20at%2013.15.20.png',
+        'https://storage.googleapis.com/portfolio-205915.appspot.com/chagg/Screenshot%202018-11-26%20at%2013.14.11.png',
+        'https://storage.googleapis.com/portfolio-205915.appspot.com/chagg/Screenshot%202018-11-26%20at%2013.14.20.png'
+      ]
+    },
+    {
       id: 1,
       name: 'Lobster',
       role: 'UX/UI Designer & Frontend Developer',
