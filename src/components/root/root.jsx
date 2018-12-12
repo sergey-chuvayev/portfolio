@@ -1,5 +1,9 @@
 import React from 'react';
 
-const Root = () => <div />;
+const Root = () => (
+  <div>
+    asdasd
+  </div>
+);
 
 export default Root;
